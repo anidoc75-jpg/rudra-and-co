@@ -8,7 +8,7 @@
 <div class="admin-card"><h2>Products</h2><div id="productList"></div></div>
 <div class="admin-card"><h2>Orders</h2><div id="orderList">Loading…</div></div></div></main>
 <script>
-const SB_URL="$https://nbwurbaukbulcgddbxsl.supabase.co",SB_KEY="$sb_publishable_DY8rQblNJTQ5-AyLqLgkYg_rkpYiJ3h",db=supabase.createClient(SB_URL,SB_KEY);
+const SB_URL="https://nbwurbaukbulcgddbxsl.supabase.co",SB_KEY="sb_publishable_DY8rQblNJTQ5-AyLqLgkYg_rkpYiJ3h"
 const $=s=>document.querySelector(s);let products=[];
 function msg(t){$("#authMsg").textContent=t;}
 async function login(){let email=$("#email").value.trim(),password=$("#password").value;if(email!=="rudraveda@gmail.com")return msg("Sirf owner admin email allowed hai.");let r=await db.auth.signInWithPassword({email,password});if(r.error)return msg(r.error.message);showPanel();}
